@@ -24,6 +24,11 @@ module VSphereCloud
         fake_search_index.should_receive(:find_by_inventory_path).with('foobar')
         client.find_by_inventory_path("foobar")
       end
+
+      it 'takes an array of pathnames' do
+        fake_search_index.should_receive(:find_by_inventory_path).with('aa/bcd')
+        client.find_by_inventory_path(['aa', 'bcd'])
+      end
     end
   end
 end
