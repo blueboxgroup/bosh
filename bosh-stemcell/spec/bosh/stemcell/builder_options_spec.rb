@@ -101,6 +101,7 @@ module Bosh::Stemcell
           expect(result['stemcell_name']).to eq ('bosh-stemcell')
           expect(result['stemcell_infrastructure']).to eq(infrastructure.name)
           expect(result['stemcell_hypervisor']).to eq(infrastructure.hypervisor)
+          expect(result['stemcell_operating_system']).to eq(operating_system.name)
           expect(result['bosh_protocol_version']).to eq('1')
           expect(result['UBUNTU_ISO']).to eq('fake_ubuntu_iso')
           expect(result['UBUNTU_MIRROR']).to eq('fake_ubuntu_mirror')
